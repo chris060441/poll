@@ -6,15 +6,16 @@
 <p>{{ poll.description }}</p>
 <p>建立日期:{{ poll.date_created }}</p>
 
-<a href="/poll/{{ poil.id }}/add/">新增選項</a>
+<a href="/poll/{{ poll.id }}/add/">新增選項</a>
 <ul>
     {% for option in option_list %}
     <li>
-        <a href="/option/{{ option.id }}/">{{ option.title }}</a>
-        - {{ option.count }}票
+        <a href="/poll/{{ poll.id }}/">{{ option.title }}</a>
+        - {{ option.count }}票    
     <a href="/option/{{ option.id }}/edit/">修改</a>
     <a href="/option/{{ option.id }}/delete/">刪除</a>
     </li>
+
     {% endfor %}
 </ul>
 {% endblock %}

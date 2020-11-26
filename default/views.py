@@ -59,7 +59,7 @@ class OptionEdit(UpdateView):
     template_name = 'default/poll_form.html'
 
     def get_success_url(self):
-        return "/poll/{}/".format(self.object.poil_id['pk'])
+        return "/poll/{}/".format(self.object.poil_id)
 
 class OptionDelete(DeleteView):
     model = Option

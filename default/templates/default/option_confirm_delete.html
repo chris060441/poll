@@ -1,8 +1,8 @@
 {% extends "base.html" %}
 
 {% block content %}
-<h1>{{ poll.subject }}</h1>
-<p>確定要刪除這個投票主題嗎？</p>
+<h1>{{ option.title }}</h1>
+<p>確定要刪除這個投票選項嗎？</p>
 <form action="" method="post">
     {% csrf_token %}
     <input type="submit" value="是的，請刪除">

@@ -1,7 +1,6 @@
 from django.urls import path
 from .views import * 
 
-
 urlpatterns = [
     # path('poll/',views.poll_list),
     path('poll/', PollList.as_view()),
@@ -12,5 +11,5 @@ urlpatterns = [
     path('poll/<int:pk>/delete/', PollDelete.as_view()),
     path('poll/<int:pk>/add/', OptionAdd.as_view()),
     path('option/<int:pk>/edit/', OptionEdit.as_view()),
-    path('option/<int:pk>delete/', OptionDelete.as_view()),
+    path('option/<int:pk>/delete/', OptionDelete.as_view()),
 ]
