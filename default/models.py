@@ -9,7 +9,6 @@ class Poll(models.Model):
     def __str__(self):
         return str(self.id) + ") " + self.subject
 
-
 class Option(models.Model):
     poil_id = models.IntegerField('所屬投票主題編號')
     title = models.CharField('選項標題', max_length=200)
@@ -17,4 +16,4 @@ class Option(models.Model):
     
 
     def __str__(self):
-        return str(self.id) + ")" + self.title + "@" + str(self.poll_id)
+        return str(self.id) + ")" + self.title + "@" + str(self.poil_id)
